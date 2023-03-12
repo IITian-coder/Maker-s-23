@@ -1,0 +1,93 @@
+body {
+    box-sizing: border-box;
+    /* background: #000; */
+    
+    background-image: url("3d-render-spotlights-grunge-brick-wall.jpg");
+    background-position: center;
+    background-size: cover;
+}
+
+#cv-form {
+    position: relative;
+    box-sizing: border-box;
+    width: 80vh;
+    border: 3px solid rgb(255, 255, 255);
+    color: rgb(255, 255, 255);
+    border-radius: 35px;
+    padding: 35px;
+    font-size: large;
+    margin-top: 200px;
+    margin-bottom: 200px;
+}
+
+.form-control {
+    background: transparent;
+    border: none;
+    outline: none;
+    border: 1px solid rgb(255, 255, 255);
+    color: rgb(217, 217, 217);
+}
+
+#cv-template{
+    padding: 30px;
+    background-color: aliceblue;
+    display: none;
+}
+
+.img{
+    height: 157px;
+    margin: 11px 26px;
+}
+.logo{
+    margin-top: 42px
+}
+.personal-info{
+    line-height: .5;
+}
+
+.hr{
+    position: relative;
+    height: 6px;
+    width: 285px;
+    background: black;
+    opacity: .8;
+    display: inline-block;
+}
+
+.span{
+    margin-left: 20px;
+    font-size: 28px;
+}
+ 
+
+.chead{
+    font-size: 25px;
+    font-weight: 550;
+}
+
+.company{
+    font-size: 25px;
+    font-style: italic;
+}
+
+.resumedate{
+    text-align: right;
+    font-size: 20px;
+}
+
+.weEnd{
+    display: none;
+}
+
+#vLine{
+    font-size: larger;
+    font-style: italic;
+}
+
+#proEnd{
+    display: none; 
+}
+
+#printbutton{
+    display: none;
+}
