@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume Builder</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+    <main>
+        <div class="container" id="cv-form">
+            <h1 class="text-center">Resume Genterator</h1>
+            <div class="row py-3">
+
+                <div class="form-group">
+                    <label for="nameField" C>Name</label>
+                    <input type="text" id="nameField" class="form-control">
+
+
+                    <label for="prgmField" class="form-label">Programme</label>
+                    <select name="Programme" id="prgmField" class="form-control">
+                        <option value="B.Tech">B.Tech</option>
+                        <option value="Int BSMS">Int. BSMS</option>
+                        <option value="Int Btech Mtech">Int Btech Mtech</option>
+                    </select>
+
+                    <label for="yrField" class="form-label">Year of study</label>
+                    <select name="yearOfStudy" id="yrField" class="form-control">
+                        <option value="&#8544; year">&#8544;year</option>
+                        <option value="&#8545; year">&#8545;year</option>
+                        <option value="&#8546; year">&#8546;year</option>
+                        <option value="&#8547;year">&#8547;year</option>
+                    </select>
+
+                    <label for="semField" class="form-label">Semester</label>
+                    <select name="semester" id="semField" class="form-control">
+                        <option value="&#8544; Sem">&#8544;Sem</option>
+                        <option value="&#8545; Sem">&#8545;Sem</option>
+                        <option value="&#8546; Sem">&#8546;Sem</option>
+                        <option value="&#8547; Sem">&#8547;Sem</option>
+                        <option value="&#8548; Sem">&#8548;Sem</option>
+                        <option value="&#8549; Sem">&#8549;Sem</option>
+                        <option value="&#8550; Sem">&#8550;Sem</option>
+                        <option value="&#8551; Sem">&#8551;Sem</option>
+                    </select>
+
+                    <label for="branchField" class="form-label">Branch</label>
+                    <input type="text" id="branchField" class="form-control">
+
+                    <label for="contactField" class="form-label">Contact Number</label>
+                    <input type="numberField" name="contact" id="contactField" class="form-control">
+
+                    <div class="form-group my-3 picture">
+                        <label class="form-label">Select your picture</label>
+                        <input id="imgField" type="file" class="formcontrol">
+                    </div>
+
+                    <label for="emailField" class="form-label">Email Adress</label>
+                    <input type="email" name="email" id="emailField" class="form-control">
+
+                    <label for="enrollnoField" class="form-label">Enrollment Number</label>
+                    <input type="number" name="enrollno" id="enrollnoField" class="form-control">
+
+                    <label for="intrestField" class="form-label">Area of Intrest</label>
+                    <input type="text" name="intrest" id="intrestField" class="form-control">
+
+
+                    <h2 class="mt-2">Educational Qualifications</h2>
+
+
+                    <div class="form-group eqField" id="eq">
+                        <div class="border border-light mt-3 p-3">
+
+                            <label class="form-label">Degree/Examination</label>
+                            <input type="text" class="form-control degField">
+
+                            <label class="form-label">Graduation Year</label>
+                            <input type="number" class="form-control gradyrField">
+
+                            <label class="form-label">Instiitute/Board</label>
+                            <input type="text" name="ins/board" class="form-control clgField">
+
+                            <label class="form-label">CGPA/Percentage</label>
+                            <input type="text" name="cgp" class="form-control cgpaField">
+                        </div>
+                        <div class="text-center mt-2" id="eqAddButton">
+                            <button onclick="addNewEQField()" class="btn btn-primary">Add</button>
+                        </div>
+                    </div>
+
+                    <!-- work Experience -->
+                    <h2 class="mt-2">Work Experience</h2>
+
+                    <div class="form-group" id="we">
+                        <div class="border border-light mt-3 p-3">
+
+                            <label class="form-label">Company's Name</label>
+                            <input type="text" name="cname" class="form-control weCNameField">
+
+                            <div class="row">
+                                <div class="col">
+                                    <label class="form-label">Joining month</label>
+                                    <input type="month" name="startdate" class="form-control weStartDateField">
+                                </div>
+
+                                <div class="col">
+                                    <label class="form-label">Ending month</label>
+                                    <input type="month" name="enddate" class="form-control weEndDateField">
+                                </div>
+                            </div>
+
+                            <label class="form-label">Position</label>
+                            <input type="text" name="post" class="form-control wePostField">
+
+                            <label class="form-label">Description</label>
+                            <input type="text" name="wedes" class="form-control weDesField">
+                        </div>
+
+                        <div class="text-center mt-2" id="weAddButton">
+                            <button onclick="addNewWEField()" class="btn btn-primary">Add</button>
+                        </div>
+                    </div>
+
+
+                    <!-- Projects -->
+
+                    <h2 class="mt-2">Projects</h2>
+
+                    <div class="form-group" id="proj">
+                        <div class="border border-light mt-3 p-3">
+                            <label class="form-label">Project's Name</label>
+                            <input type="text" name="pname" class="form-control projwePostField">
+
+                            <div class="row">
+                                <div class="col">
+                                    <label class="form-label">Joining month</label>
+                                    <input type="month" name="enddate" class="form-control projweStartDateField">
+                                </div>
+                                <div class="col">
+                                    <label class="form-label">Ending month</label>
+                                    <input type="month" name="enddate" class="form-control projweEndDateField">
+                                </div>
+                            </div>
+
+                            <label class="form-label">Company/Organisation's name</label>
+                            <input type="text" name="orgname" class="form-control projweCNameField">
+
+                            <label class="form-label">Project Description</label>
+                            <input type="text" name="projdes" class="form-control projweDesField">
+                        </div>
+                        <div class="text-center mt-2" id="projAddButton">
+                            <button onclick="addNewProjField()" class="btn btn-primary">Add</button>
+                        </div>
+
+                    </div>
+
+                    <div>
+                        <label for="skills" class="form-label">Skills</label>
+                        <textarea name="skills" id="skills" class="form-control"></textarea>
+                    </div>
+
+                    <div>
+                        <label for="achieve" class="form-label">Achievements</label>
+                        <textarea name="achieve" id="achieve" class="form-control"></textarea>
+                    </div>
+                </div>
+
+            </div>
+            <div class="container mt-3 text-center">
+                <button onclick="generateCV()" class="btn btn-primary">Generate CV</button>
+            </div>
+        </div>
+
+
+ 
+        <!-- CV TEMPLATE -->
+
+
+
+        <div class="container" id="cv-template">
+            <div class="row personal-info">
+                <div class="col-md-2">
+                    <p><img id="imgTemplate" src="default.webp" alt="img" class="img-fluid img"></p>
+                </div>
+                <div class="col-md-6 mt-3">
+                    <h3 id="tempName">Ansh Rastogi</h3>
+                    <p><span id="tempYr">IV Year</span> , <span id="tempSem">II Semester</span></p>
+                    <p><span id="tempPrgm">B.Tech</span> (<span id="tempBranch">Engnieering Physics</span>)</p>
+                    <p id="tempContact">Contact no: 9690062110</p>
+                    <p id="tempEmail">Email: ansh_r@ph.iitr.ac.in</p>
+                    <p id="tempEnrollno">Enrollment no: 22123006</p>
+                </div>
+                <div class="col-md-4">
+                    <p><img src="iitr-logo.png" alt="IITR_Logo" class="img-fluid logo"></p>
+                </div>
+            </div>
+
+            <div id="pro-info">
+                <hr class="hr m-0" noshade=""><span class="span">Area of Intrest</span>
+
+                <!-- Area of Intrests -->
+                <div>
+                    <p class="m-0" id="tempIntrest">python, Data Structure and algorithm, java, webD, Badmintoon,
+                        snooker, cardistry
+                    </p>
+                </div>
+
+                <!-- Educational Qualifications -->
+                <hr class="hr m-0" noshade=""><span class="span">Educational Qualifications</span>
+
+                <div>
+                    <table class="table table-bordered m-0" id="tempEq">
+                        <thead>
+                            <tr>
+                                <th>Year</th>
+                                <th>Degree/Examination</th>
+                                <th>Institution/Board</th>
+                                <th>CGPA/Percentage</th>
+                            </tr>
+                        </thead>
+                    </table>
+                </div>
+
+
+                <!-- WorkExpirence/Interships -->
+                <hr class="hr m-0" noshade=""><span class="span">Work Expirence</span>
+
+                <div id="wetemplate">                   
+                    
+                    <div id="weEnd"></div>
+                </div>
+
+
+
+                <!-- Projects -->
+                <hr class="hr m-0 projectHr" noshade=""><span class="span">Project</span>
+
+                <div id= "projTemplate">
+    
+                    <div id="projEnd"></div>
+                </div>
+                
+
+                <hr class="hr m-0" noshade=""><span class="span">Skills</span>
+
+                <div>
+                    <p id="tempSkills">Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo suscipit ut,
+                        possimus et corporis
+                        facilis molestiae accusantium nostrum nisi quo qui quaerat consequuntur optio odio. Tempore
+                        numquam aut molestiae voluptatem!</p>
+                </div>
+
+                <hr class="hr m-0" noshade=""><span class="span">Achievements</span>
+
+                <div>
+                    <p id= "tempAchievement">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aspernatur tempora repellat nobis
+                        doloremque, eum impedit sapiente suscipit inventore cum ducimus perspiciatis assumenda dicta,
+                        quam quidem eos non error laborum corrupti.</p>
+                </div>
+
+            </div>
+        </div>   
+        
+        <div class="mt-3 text-center" id="printbutton">
+            <button onclick ="printDiv('cv-template')" class="btn btn-primary">Print Resume</button>
+        </div>
+    </main>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+        crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+
+</body>
+</html>
